@@ -39,7 +39,7 @@ const pageData = {
     maxItems: 50
   },
   inquiryFields: [
-    { id: "activity-name", label: "활동명", description: "방송 활동명을 적어주세요.", type: "text", placeholder: "예: FANCY PLANET" },
+    { id: "activity-name", label: "활동명", description: "방송 활동명을 적어주세요.", type: "text", placeholder: "예: 초솜" },
     { id: "broadcast-link", label: "방송국 링크", description: "활동 중인 방송 링크를 적어주세요.", type: "url", placeholder: "https://" },
     { id: "background-option", label: "원하시는 배경 및 옵션 선택", description: "원하시는 배경과 옵션을 적어주세요.", type: "textarea", placeholder: "예: 파스텔 블루 / BASIC A ROOM" },
     { id: "neon-sign", label: "네온사인 문구", description: "원하는 폰트 있으실 경우 폰트 이름을 적어주세요.", type: "text", placeholder: "네온사인에 넣을 문구" },
@@ -50,7 +50,7 @@ const pageData = {
   ],
   notices: [
     "결제 전 반드시 주의사항 확인 후 문의 부탁드립니다.",
-    "모든 작업물의 저작권은 팬시플래닛 스튜디오에 있습니다.\n최종 작업물을 방송 배경 이외의 목적으로 사용하거나 2차 가공 및 배포, 제3자에게 판매, 공유 등을 금지합니다.\n합방에 이용하실 경우 양측 구매 필수입니다.",
+    "모든 작업물의 저작권은 작가에게 있습니다.\n최종 작업물을 방송 배경 이외의 목적으로 사용하거나 2차 가공 및 배포, 제3자에게 판매, 공유 등을 금지합니다.\n합방에 이용하실 경우 양측 구매 필수입니다.",
     "최종 작업물은 작가의 포트폴리오 및 홍보물로 이용될 수 있습니다.\n원치 않으실 경우 작업 전 말씀해주세요.",
     "단순 변심으로 인한 수정 및 환불은 불가능합니다.\n요청사항이 있으시다면 작업이 시작되기 전에 최대한 자세하게 알려주세요.",
     "팬캐릭터, 커스텀 네온사인 제작을 원하신다면 디자인을 확실히 알 수 있는 도안을 필수로 준비해주세요.",
