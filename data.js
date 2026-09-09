@@ -44,7 +44,6 @@ const pageData = {
     { id: "background-option", label: "원하시는 배경 및 옵션 선택", description: "원하시는 배경과 옵션을 적어주세요.", type: "textarea", placeholder: "예: 파스텔 블루 / BASIC A ROOM" },
     { id: "neon-sign", label: "네온사인 문구", description: "원하는 폰트 있으실 경우 폰트 이름을 적어주세요.", type: "text", placeholder: "네온사인에 넣을 문구" },
     { id: "time-chat", label: "시간대 / 채팅창 선택", description: "원하는 시간대와 채팅창을 선택해주세요.", type: "select", options: ["선택해주세요", "낮 시간대 / A 타입", "낮 시간대 / B 타입", "낮 시간대 / C 타입", "밤 시간대 / A 타입", "밤 시간대 / B 타입", "밤 시간대 / C 타입", "노을 시간대 / A 타입", "노을 시간대 / B 타입", "노을 시간대 / C 타입"] },
-    { id: "window-view", label: "원하는 창밖 풍경", description: "하늘, 해변, 도시 등 간단하게 적어주셔도 좋습니다.", type: "textarea", placeholder: "예: 하늘" },
     { id: "additional-request", label: "추가 요청사항", description: "색상 커스텀 관련 참고자료나 색상 코드가 있다면 함께 적어주세요. 팬캐릭터 제작을 원하실 경우 위치를 알려주세요. 요청사항이 없을 경우 생략하셔도 됩니다.", type: "textarea", placeholder: "추가 요청사항" },
     { id: "portfolio-consent", label: "포트폴리오 이용 동의 여부", description: "포트폴리오 이용 동의 여부를 선택해주세요.", type: "select", options: ["선택해주세요", "동의", "비동의"] }
   ],
