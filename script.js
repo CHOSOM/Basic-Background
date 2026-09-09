@@ -93,7 +93,7 @@ function renderPortfolio() {
 
   imagePaths.forEach((path, order) => {
     const image = new Image();
-    image.alt = "FANCY PLANET 작업 포트폴리오";
+    image.alt = "초솜's 작업 포트폴리오";
     image.onload = () => {
       const item = document.createElement("article");
       item.className = "portfolio-item";
@@ -231,7 +231,7 @@ function setupEmbeddedNavigation() {
       if (!target) return;
 
       window.parent.postMessage({
-        type: "fancy-planet:navigate",
+        type: "CHOSOM:navigate",
         top: Math.round(target.getBoundingClientRect().top + window.scrollY)
       }, "*");
     });
@@ -242,7 +242,7 @@ function reportEmbedHeight() {
   if (window.parent === window) return;
   // iframe의 임시 높이(예: 9000px)가 아니라 실제 페이지 내용 높이만 전달합니다.
   const height = Math.ceil(document.body.scrollHeight);
-  window.parent.postMessage({ type: "fancy-planet:resize", height }, "*");
+  window.parent.postMessage({ type: "CHOSOM:resize", height }, "*");
 }
 
 preloadImages([...pageData.backgrounds, ...pageData.times, ...pageData.shapes, ...pageData.materials]);
@@ -260,6 +260,6 @@ setupEmbeddedNavigation();
 window.addEventListener("load", reportEmbedHeight);
 window.addEventListener("resize", reportEmbedHeight);
 window.addEventListener("message", (event) => {
-  if (event.data?.type === "fancy-planet:request-height") reportEmbedHeight();
+  if (event.data?.type === "CHOSOM:request-height") reportEmbedHeight();
 });
 if ("ResizeObserver" in window) new ResizeObserver(reportEmbedHeight).observe(document.documentElement);
