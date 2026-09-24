@@ -27,8 +27,7 @@ const pageData = {
   ],
   deliveries: [
     { id: "room", name: "방 전경", image: `${assetRoot}/Deliveries/Room.png` },
-    { id: "desk-chat", name: "책상 / 채팅창 O", image: `${assetRoot}/Deliveries/Desk_Chat O.png` },
-    { id: "desk-no-chat", name: "책상 / 채팅창 X", image: `${assetRoot}/Deliveries/Desk_Chat X.png` },
+    { id: "desk-chat", name: "책상", image: `${assetRoot}/Deliveries/Desk_Chat O.png` },
     { id: "chat-window", name: "채팅창", image: `${assetRoot}/Deliveries/Chat.png` }
   ],
   portfolio: {
