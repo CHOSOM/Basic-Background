@@ -124,7 +124,7 @@ a { color: inherit; }
 .delivery__notes { display: grid; gap: 5px; max-width: 820px; margin: 12px 0 0; padding: 0; color: var(--muted); list-style: none; font-size: 13px; }
 .delivery__notes li { position: relative; padding-left: 12px; }
 .delivery__notes li::before { position: absolute; top: .82em; left: 0; width: 4px; border-top: 1px solid var(--accent); content: ""; }
-.delivery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.delivery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .delivery-item { padding: 13px; border-top: 1px solid var(--line-strong); background: var(--bg); }
 .delivery-item h3 { margin: 0 0 11px; font-size: 14px; font-weight: 500; }
 .portfolio { padding-block: 82px; background: var(--warm); }
