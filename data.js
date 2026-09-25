@@ -26,7 +26,7 @@ const pageData = {
     { id: "material-glossy", name: "글로시", image: `${assetRoot}/Chat/Material_Glossy.png`, color: "#6979c1" }
   ],
   deliveries: [
-    { id: "room", name: "방 전경", image: `${assetRoot}/Deliveries/Room.png` },
+    { id: "room", name: "방", image: `${assetRoot}/Deliveries/Room.png` },
     { id: "desk-chat", name: "책상", image: `${assetRoot}/Deliveries/Desk.png` },
     { id: "chat-window", name: "채팅창", image: `${assetRoot}/Deliveries/Chat.png` }
   ],
