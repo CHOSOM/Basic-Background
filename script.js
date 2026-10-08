@@ -78,36 +78,42 @@ function renderPortfolio() {
   const { prefix, extension, maxItems, files = [] } = pageData.portfolio;
   const imagePaths = files.length
     ? [...files]
-    : Array.from({ length: maxItems }, (_, index) => `${prefix}${String(index + 1).padStart(2, "0")}${extension}`);
+    : Array.from(
+        { length: maxItems },
+        (_, index) => `${prefix}${String(index + 1).padStart(2, "0")}${extension}`
+      );
 
-  // 큰 번호가 가장 먼저 보이도록 정렬합니다. (Portfolio_09 → Portfolio_08 → ...)
   imagePaths.sort((a, b) => fileNumber(b) - fileNumber(a));
 
-  let checked = 0;
-  let visible = 0;
-  const showEmptyMessage = () => {
-    checked += 1;
-    if (checked !== imagePaths.length || visible) return;
-    track.innerHTML = '<article class="portfolio-item"><div class="preview-frame placeholder">등록된 포트폴리오 이미지가 없습니다.</div></article>';
-  };
-
-  imagePaths.forEach((path, order) => {
+  const imageRequests = imagePaths.map((path) => new Promise((resolve) => {
     const image = new Image();
     image.alt = "초솜's 작업 포트폴리오";
-    image.onload = () => {
+    image.onload = () => resolve(image);
+    image.onerror = () => resolve(null);
+    image.src = path;
+  }));
+
+  Promise.all(imageRequests).then((images) => {
+    const availableImages = images.filter(Boolean);
+
+    if (!availableImages.length) {
+      track.innerHTML = '<article class="portfolio-item"><div class="preview-frame placeholder">등록된 포트폴리오 이미지가 없습니다.</div></article>';
+      return;
+    }
+
+    const cards = availableImages.map((image) => {
       const item = document.createElement("article");
       item.className = "portfolio-item";
-      item.style.order = String(order);
+
       const frame = document.createElement("div");
       frame.className = "preview-frame";
       frame.append(image);
+
       item.append(frame);
-      track.append(item);
-      visible += 1;
-      showEmptyMessage();
-    };
-    image.onerror = showEmptyMessage;
-    image.src = path;
+      return item;
+    });
+
+    track.replaceChildren(...cards);
   });
 
   const move = (direction) => {
