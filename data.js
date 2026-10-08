@@ -26,7 +26,7 @@ const pageData = {
     { id: "material-glossy", name: "글로시", image: `${assetRoot}/Chat/Material_Glossy.png`, color: "#6979c1" }
   ],
   /* 이미지 추가 영역에 표시되는 예시 이미지입니다. 파일명 또는 경로만 바꾸면 됩니다. */
-  imageAddition: { id: "image-addition", name: "이미지 추가", image: `${assetRoot}/Sample/Image Addition.png` },
+  imageAddition: { id: "image-addition", name: "이미지 추가", image: `${assetRoot}/Image Addition/Poster_Sample.png` },
   deliveries: [
     { id: "room", name: "방", image: `${assetRoot}/Deliveries/Room.png` },
     { id: "desk-chat", name: "책상", image: `${assetRoot}/Deliveries/Desk.png` },
